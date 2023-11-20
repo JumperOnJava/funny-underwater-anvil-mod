@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "funny_anvil_mod",
+  "version": "${version}",
+  "name": "Funny anvil mod",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/JumperOnJava/underwater_movement"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/funny_anvil_mod/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.jumperonjava.underwater_movement.FunnyAnvilMod"
+    ],
+    "main": [
+    ]
+  },
+  "accessWidener": "underwater_movement.accesswidener",
+  "mixins": [
+    "funny_anvil_mod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
