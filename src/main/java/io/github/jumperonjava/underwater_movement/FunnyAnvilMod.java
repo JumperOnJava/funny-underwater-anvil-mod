@@ -37,7 +37,8 @@ public class FunnyAnvilMod implements ClientModInitializer {
                     var playerPos = player.getPos();
                     var world = player.getWorld();
                     var offset = playerPos.add(j,i,k);
-                    var block = world.getBlockState(new BlockPos((int) offset.x, (int) offset.y, (int) offset.z)).getBlock();
+                    var blockpos = new BlockPos((int) Math.floor(offset.x), (int) Math.floor(offset.y), (int) Math.floor(offset.z));
+                    var block = world.getBlockState(blockpos).getBlock();
                     if(block == Blocks.NETHER_QUARTZ_ORE){
                         quartzFound = true;
                     }
@@ -53,7 +54,7 @@ public class FunnyAnvilMod implements ClientModInitializer {
                     var playerPos = player.getPos();
                     var world = player.getWorld();
                     var offset = playerPos.add(j,i,k);
-                    var blockpos = new BlockPos((int) offset.x, (int) offset.y, (int) offset.z);
+                    var blockpos = new BlockPos((int) Math.floor(offset.x), (int) Math.floor(offset.y), (int) Math.floor(offset.z));
                     var block = world.getBlockState(blockpos).getBlock();
                     if(block == Blocks.LODESTONE){
                         var radius = 0;
